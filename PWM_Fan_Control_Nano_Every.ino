@@ -52,6 +52,6 @@ void loop() {
   
   avg = sum/NUM_READINGS;                       // Smooth the Potentiometer Readings by average the readings
   Serial.println(map(avg, 0, 1023, 0, 128));
-  TimerB0.setPwmMode(CLOCK_DIVIDER, map(avg, 0, 1023, 0, 10)); 
+  TimerB0.setPwmMode(CLOCK_DIVIDER, map(avg, 0, 1023, 0, CLOCK_DIVIDER)); 
   delay(DELAY_TIME_MS);
 }
